@@ -3,3 +3,5 @@
 *.so
 *.log
 *.DS_Store
+rebar
+deps/
