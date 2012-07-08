@@ -1,0 +1,5 @@
+*.beam
+*.o
+*.so
+*.log
+*.DS_Store
