@@ -5,5 +5,6 @@
               {applications,[kernel,stdlib,crypto,public_key,ssl,cowboy]},
               {mod,{pymwyfa_web_app,[]}},
               {env,[]},
-              {modules,[conf,home_handler,pymwyfa_web,pymwyfa_web_app,
+              {modules,[conf,home_dtl,home_handler,pymwyfa_web,
+                        pymwyfa_web_app,pymwyfa_web_resource,
                         pymwyfa_web_sup]}]}.

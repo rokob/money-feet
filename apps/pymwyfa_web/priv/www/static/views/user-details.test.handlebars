@@ -1,0 +1,70 @@
+<header class="subhead">
+  <div class="row">
+    <ul class="thumbnails">
+      <li class="span12">
+        <div class="thumbnail span2 offset1">
+          <img class="user_img" src="{{info.img}}" />
+        </div>
+        <div class="span8">
+          {{#if is_current}}
+          <h1>Your activity</h1>
+          <p class="lead">Your races</p>
+          {{else}}
+          <h1>{{info.disp_name}}'s races</h1>
+          <p class="lead">Check out what {{info.disp_name}} is up to</p>
+          {{/if}}
+        </div>
+      </li>
+    </ul>
+  </div>
+</header>
+<section>
+  <div class="page-header">
+    <h1>Races</h1>
+  </div>
+  {{#each races}}
+  <div class="row">
+    <ul class="thumbnails">
+      <li class="span12">
+        <div class="thumbnail span2 offset1">
+          <img class="race_img" src="{{img}}" />
+        </div>
+        <div class="span6">
+          <a href="#user/{{../info.id}}/race/{{id}}">
+          <h3>{{name}} - {{location}}</h3>
+          </a>
+          <h4>Distance: {{distance}} {{units}}</h4>
+          <h4>{{formatTime datetime}}</h4>
+          <h4><a href="{{url}}">Race website</a></h4>
+          <p>{{blurb}}</p>
+        </div>
+        <div class="span2">
+        <a class="btn btn-success"
+        href="#user/{{../info.id}}/race/{{id}}">Support</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  {{/each}}
+</section>
+<section>
+  <div class="page-header">
+    <h1>Charities {{info.disp_name}} supports</h1>
+  </div>
+  {{#each charities}}
+  <div class="row">
+    <ul class="thumbnails">
+      <li class="span12">
+        <div class="thumbnail span2 offset1">
+          <img class="charity_img" src="{{img}}" />
+        </div>
+        <div class="span8">
+          <h3>{{name}}</h3>
+          <h4><a href="{{url}}">Charity website</a></h4>
+          <p>{{blurb}}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  {{/each}}
+</section>

@@ -1,0 +1,32 @@
+body {
+  padding-top: 75px;
+}
+
+.subhead h1 {
+  font-size: 50px;
+  padding-bottom: 10px;
+}
+
+
+input.title {
+}
+
+textarea.snippet {
+  font-family: Consolas, Lucidia Console, DejaVu Sans Mono, Courier;
+}
+
+.centered {
+  text-align: center;
+}
+
+.vote-buttons {
+  padding-top: 15px;
+}
+
+.vote-complete {
+  padding-top: 15px;
+}
+
+.no-show {
+  display: none;
+}

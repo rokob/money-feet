@@ -1,0 +1,252 @@
+{
+  "user_pages": {
+    "u1": {
+      "is_current": true,
+      "info": {
+        "id": "u1",
+        "disp_name": "Andy",
+        "full_name": "Andy Ledvina",
+        "charities": ["c1"],
+        "races": ["r3"],
+        "img":
+        "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-snc4/370842_10234694_1622559660_n.jpg"
+      },
+      "races": [
+        {"id": "r3",
+         "name": "Bay To Breakers",
+         "location": "San Francisco, CA, USA",
+         "lat": 107.0,
+         "lng": -100.0,
+         "distance": 10,
+         "units": "km",
+         "datetime": "2012-06-01T16:30:00.234Z",
+         "url": "http://www.sfmarathon.com",
+         "blurb": "This is a no holds bared, sometimes naked, race through the streets of San Francisco. Don't forget the sunscreen.",
+         "img":
+         "http://profile.ak.fbcdn.net/hprofile-ak-ash2/373042_137767759597107_1328664161_n.jpg"
+        }
+      ],
+      "charities": [
+        {"id": "c1",
+         "name": "Autism Speaks",
+         "img":
+         "http://c.asstatic.com/images/872850_634349512363751250-180_135.jpg",
+         "url": "http://www.autismspeaks.com",
+         "blurb": "Autism Speaks supports people with blah blah blah"
+        }
+      ]
+    },
+    "u2": {
+      "info": {
+        "id": "u2",
+        "disp_name": "Wolf",
+        "full_name": "Wolf Gang",
+        "charities": ["c1","c2"],
+        "races": ["r1"],
+        "img":
+        "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-snc4/370842_10234694_1622559660_n.jpg"
+      },
+      "races": [
+        {"id": "r1",
+         "name": "Chicago Half Marathon",
+         "location": "Chicago, IL, USA",
+         "lat": 127.0,
+         "lng": -50.0,
+         "distance": 13.1,
+         "units": "mi",
+         "datetime": "2012-08-31T14:30:00.000Z",
+         "url": "http://www.chicagohalfmarathon.com",
+     "blurb": "One of the premier half marathon races in the US. Run through the beautiful city of Chicago on this extremely fast course.",
+         "img":
+         "http://profile.xx.fbcdn.net/hprofile-snc4/373444_127966153934447_938623636_n.jpg"
+        }
+      ],
+      "charities": [
+        {"id": "c1",
+         "name": "Autism Speaks",
+         "img":
+         "http://c.asstatic.com/images/872850_634349512363751250-180_135.jpg",
+         "url": "http://www.autismspeaks.com",
+         "blurb": "Autism Speaks supports people with blah blah blah"
+        },
+        {"id": "c2",
+         "name": "Livestrong",
+         "img":
+         "http://profile.ak.fbcdn.net/hprofile-ak-snc4/188040_203811856329817_2778263_n.jpg",
+         "url": "http://www.livestrong.com",
+         "blurb": "The Livestrong Foundation supports people with blah blah blah"
+        }
+      ]
+    },
+    "u3": {
+      "info": {
+        "id": "u3",
+        "disp_name": "Lauren",
+        "full_name": "Lauren Runner",
+        "charities": [],
+        "races": ["r1"],
+        "img":
+        "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-snc4/370842_10234694_1622559660_n.jpg"
+      },
+      "races": [
+        {"id": "r1",
+         "name": "Chicago Half Marathon",
+         "location": "Chicago, IL, USA",
+         "lat": 127.0,
+         "lng": -50.0,
+         "distance": 13.1,
+         "units": "mi",
+         "datetime": "2012-08-31T14:30:00.000Z",
+         "url": "http://www.chicagohalfmarathon.com",
+     "blurb": "One of the premier half marathon races in the US. Run through the beautiful city of Chicago on this extremely fast course.",
+         "img":
+         "http://profile.xx.fbcdn.net/hprofile-snc4/373444_127966153934447_938623636_n.jpg"
+        }
+      ],
+      "charities": [
+      ]
+    }
+  },
+  "user_race_pages": {
+    "u1:r3": {
+	  "user": {
+            "id": "u1",
+            "disp_name": "Andy",
+            "full_name": "Andy Ledvina",
+            "charities": ["c1"],
+            "races": ["r3"],
+            "img":
+            "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-snc4/370842_10234694_1622559660_n.jpg"
+          },
+	  "race": {
+            "id": "r3",
+            "name": "Bay To Breakers",
+            "location": "San Francisco, CA, USA",
+            "lat": 107.0,
+            "lng": -100.0,
+            "distance": 10,
+            "units": "km",
+            "datetime": "2012-06-01T16:30:00.234Z",
+            "url": "http://www.sfmarathon.com",
+            "blurb": "This is a no holds bared, sometimes naked, race through the streets of San Francisco. Don't forget the sunscreen.",
+            "img":
+            "http://profile.ak.fbcdn.net/hprofile-ak-ash2/373042_137767759597107_1328664161_n.jpg"
+          },
+	  "goal": "2160",
+	  "result": "",
+	  "supporters": 1,
+	  "bib": "887",
+	  "challenges": [
+    {"from": "u2",
+     "from_name": "Wolf",
+     "to": "u1",
+     "race": "r3",
+     "flat": 0,
+     "bonus": 5,
+     "scale": 5,
+     "unit": 60,
+     "charity": "c1"
+    }
+	  ],
+	  "charities": [
+    {"id": "c1",
+     "name": "Autism Speaks",
+     "img":
+     "http://c.asstatic.com/images/872850_634349512363751250-180_135.jpg",
+     "url": "http://www.autismspeaks.com",
+     "blurb": "Autism Speaks supports people with blah blah blah"
+    }
+	  ]
+	},
+	"u3:r1": {
+          "user":  {
+	    "id": "u3",
+            "disp_name": "Lauren",
+            "full_name": "Lauren Runner",
+            "charities": [],
+            "races": ["r1"],
+            "img":
+            "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-snc4/370842_10234694_1622559660_n.jpg"
+          },
+          "race": {
+     "id": "r1",
+     "name": "Chicago Half Marathon",
+     "location": "Chicago, IL, USA",
+     "lat": 127.0,
+     "lng": -50.0,
+     "distance": 13.1,
+     "units": "mi",
+     "datetime": "2012-08-31T14:30:00.000Z",
+     "url": "http://www.chicagohalfmarathon.com",
+     "blurb": "One of the premier half marathon races in the US. Run through the beautiful city of Chicago on this extremely fast course.",
+     "img":
+     "http://profile.xx.fbcdn.net/hprofile-snc4/373444_127966153934447_938623636_n.jpg"
+    },
+          "goal": "5400",
+          "result": "",
+          "supporters": 1,
+          "bib": "",
+          "challenges": [
+    {"from": "u1",
+     "from_name": "Andy",
+     "to": "u3",
+     "race": "r1",
+     "flat": 10,
+     "bonus": 10,
+     "scale": 1,
+     "unit": 30,
+     "charity": "default"
+    }
+          ],
+          "charities": [
+    {"id": "c1",
+     "name": "Autism Speaks",
+     "img":
+     "http://c.asstatic.com/images/872850_634349512363751250-180_135.jpg",
+     "url": "http://www.autismspeaks.com",
+     "blurb": "Autism Speaks supports people with blah blah blah"
+    }
+          ]
+	},
+	"u2:r1": {
+          "user":  {
+	    "id": "u2",
+            "disp_name": "Wolf",
+            "full_name": "Wolf Gang",
+            "charities": ["c1", "c2"],
+            "races": ["r1"],
+            "img":
+            "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-snc4/370842_10234694_1622559660_n.jpg"
+          },
+          "race": {
+     "id": "r1",
+     "name": "Chicago Half Marathon",
+     "location": "Chicago, IL, USA",
+     "lat": 127.0,
+     "lng": -50.0,
+     "distance": 13.1,
+     "units": "mi",
+     "datetime": "2012-08-31T14:30:00.000Z",
+     "url": "http://www.chicagohalfmarathon.com",
+     "blurb": "One of the premier half marathon races in the US. Run through the beautiful city of Chicago on this extremely fast course.",
+     "img":
+     "http://profile.xx.fbcdn.net/hprofile-snc4/373444_127966153934447_938623636_n.jpg"
+    },
+          "goal": "5700",
+          "result": "",
+          "supporters": 0,
+          "bib": "",
+          "challenges": [
+          ],
+          "charities": [
+        {"id": "c2",
+         "name": "Livestrong",
+         "img":
+         "http://profile.ak.fbcdn.net/hprofile-ak-snc4/188040_203811856329817_2778263_n.jpg",
+         "url": "http://www.livestrong.com",
+         "blurb": "The Livestrong Foundation supports people with blah blah blah"
+        }
+          ]
+	}
+  }
+}

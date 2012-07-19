@@ -1,0 +1,59 @@
+<header class="subhead">
+  <div class="row">
+    <ul class="thumbnails">
+      <li class="span12">
+        <div class="thumbnail span2 offset1">
+          <img class="user_img" src="{{user.img}}" />
+        </div>
+        <div class="span5 centered">
+          <h1>{{user.disp_name}}</h1>
+          <p class="lead">{{race.name}}</p>
+        </div>
+        <div class="thumbnail span2">
+          <img class="race_img" src="{{race.img}}" />
+        </div>
+      </li>
+    </ul>
+  </div>
+</header>
+<section>
+  <div class="page-header">
+    <h1>Goal: {{goal}}</h1>
+    <h1>Supporters: {{supporters}}</h1>
+  </div>
+  {{#each challenges}}
+  <div class="row">
+    <div class="span3">
+      <h3>From: <a href="#user/{{from}}">{{from_name}}</a></h3>
+    </div>
+    <div class="span9">
+      <ul>
+        <li>Flat amount: ${{flat}}</li>
+        <li>Bonus if beat goal: ${{bonus}}</l1>
+        <li>For every {{unit}} seconds: ${{scale}}</li>
+    </ul>
+  </div>
+  </div>
+  {{/each}}
+</section>
+<section>
+  <div class="page-header">
+    <h1>Charities</h1>
+  </div>
+  {{#each charities}}
+  <div class="row">
+    <ul class="thumbnails">
+      <li class="span12">
+        <div class="thumbnail span2 offset1">
+          <img class="charity_img" src="{{img}}" />
+        </div>
+        <div class="span6">
+        <h3>{{name}}</h3>
+        <h4><a href="{{url}}">Website</a></h4>
+        <p>{{blurb}}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  {{/each}}
+</section>
