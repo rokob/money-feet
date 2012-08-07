@@ -6,7 +6,7 @@
           <img class="user_img" src="{{user.img}}" />
         </div>
         <div class="span5 centered">
-          <h1>{{user.disp_name}}</h1>
+          <h1>{{user.name}}</h1>
           <p class="lead">{{race.name}}</p>
         </div>
         <div class="thumbnail span2">
@@ -27,19 +27,22 @@
       <h3>From: <a href="#user/{{from}}">{{from_name}}</a></h3>
     </div>
     <div class="span9">
-      <ul>
-        <li>Flat amount: ${{flat}}</li>
-        <li>Bonus if beat goal: ${{bonus}}</l1>
-        <li>For every {{unit}} seconds: ${{scale}}</li>
-    </ul>
-  </div>
+      <h4>Prospective finish:
+        <span data-challenge-time="{{from}}">{{secsToTime ../goal}}</span>
+      </h4>
+      <h4>Donation amount:
+        $<span data-challenge-amt="{{from}}">{{flat}}</span>
+      </h4>
+      <div id="slider-{{from}}"></div>
   </div>
   {{else}}
   <div class="row">
-    <h3>No supporters yet!</h3>
-    {{#unless ../is_current}}
-    <a href="" class="btn btn-success">Be the first one!</a>
-    {{/unless}}
+    <div class="span3">
+      <h3>No supporters yet!</h3>
+      {{#unless ../is_current}}
+      <a href="" class="btn btn-success">Be the first one!</a>
+      {{/unless}}
+    </div>
   </div>
   {{/each}}
 </section>
@@ -61,6 +64,12 @@
         </div>
       </li>
     </ul>
+  </div>
+  {{else}}
+  <div class="row">
+    <div class="span3">
+      <h3>No charity selected yet</h3>
+    </div>
   </div>
   {{/each}}
 </section>

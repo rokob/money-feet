@@ -1,12 +1,6 @@
 Handlebars.registerHelper 'formatTime', (context) ->
-  dateFormat(context)
+  mask = "ddd mmm dd yyyy HH:MM"
+  dateFormat(context, mask)
 
 Handlebars.registerHelper 'secsToTime', (cxt) ->
-  hours = Math.floor cxt/3600
-  rem = cxt % 3600
-  mins = Math.floor rem/60
-  secs = rem % 60
-  hourStr = if hours>0 then "#{hours}:" else ""
-  minStr = if mins<10 then "0#{mins}:" else "#{mins}:"
-  secStr = if secs<10 then "0#{secs}" else "#{secs}"
-  "#{hourStr}#{minStr}#{secStr}"
+  App.utility.secToStr(cxt)

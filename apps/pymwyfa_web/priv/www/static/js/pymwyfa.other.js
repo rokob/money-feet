@@ -2,19 +2,13 @@
 (function() {
 
   Handlebars.registerHelper('formatTime', function(context) {
-    return dateFormat(context);
+    var mask;
+    mask = "ddd mmm dd yyyy HH:MM";
+    return dateFormat(context, mask);
   });
 
   Handlebars.registerHelper('secsToTime', function(cxt) {
-    var hourStr, hours, minStr, mins, rem, secStr, secs;
-    hours = Math.floor(cxt / 3600);
-    rem = cxt % 3600;
-    mins = Math.floor(rem / 60);
-    secs = rem % 60;
-    hourStr = hours > 0 ? "" + hours + ":" : "";
-    minStr = mins < 10 ? "0" + mins + ":" : "" + mins + ":";
-    secStr = secs < 10 ? "0" + secs : "" + secs;
-    return "" + hourStr + minStr + secStr;
+    return App.utility.secToStr(cxt);
   });
 
 }).call(this);

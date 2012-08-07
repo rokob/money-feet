@@ -17,13 +17,9 @@ content_types_provided(Req, State) ->
   {[{{<<"text">>,<<"html">>, []}, to_html}], Req, State}.
 
 to_html(Req, State) ->
-  Css = random_version(4),
-  Rvers = random_version(4),
-  Overs = random_version(4),
   Params = [{logged_in, true},
     {user_id, <<"u1">>}, {user_name, <<"Andy Ledvina">>},
-    {css_version, Css}, {route_version, Rvers},
-    {other_version, Overs}],
+    {version, random_version(4)}, {backbone, true}],
   {ok, Content} = home_dtl:render(Params),
   {Content, Req, State}.
 

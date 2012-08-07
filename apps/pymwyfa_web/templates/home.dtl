@@ -6,20 +6,35 @@
 
     <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="/css/jquery-ui-1.8.21.custom.css" rel="stylesheet" type="text/css" />
     <link href="/css/pymwyfa.css?v={{css_version}}" rel="stylesheet" type="text/css" />
 
     <script src="/js/jquery.min.js" type="text/javascript"></script>
+    <script src="/js/jquery-ui.min.js" type="text/javascript"></script>
     <script src="/js/bootstrap.js" type="text/javascript"></script>
     <script src="/js/date.format.js" type="text/javascript"></script>
     <script src="/js/handlebars.js" type="text/javascript"></script>
+    <script src="/js/underscore.min.js" type="text/javascript"></script>
+    {% if backbone %}
+    <script src="/js/backbone.js" type="text/javascript"></script>
+    <script src="/js/pymwyfa.backbone.js?v={{version}}" type="text/javascript"></script>
+    {% else %}
     <script src="/js/finch.min.js" type="text/javascript"></script>
-    <script src="/js/pymwyfa.routing.js?v={{route_version}}" type="text/javascript"></script>
-    <script src="/js/pymwyfa.other.js?v={{other_version}}" type="text/javascript"></script>
+    <script src="/js/pymwyfa.routing.js?v={{version}}" type="text/javascript"></script>
+    {% endif %}
+    <script src="/js/pymwyfa.other.js?v={{version}}" type="text/javascript"></script>
 
     <script type="text/javascript">
+      {% if backbone %}
+      $(function() {
+        var router = new window.AppRouter();
+        router.start({% if logged_in %}"{{ user_id }}"{% endif %});
+      });
+      {% else %}
       $(function() {
         return Finch.listen();
       });
+      {% endif %}
     </script>
   </head>
   <body>
@@ -29,13 +44,18 @@
           <a class="brand" href="#">PYMWYFA</a>
           {% if logged_in %}
           <ul class="nav">
-            <li class="active"><a href="#user/{{ user_id }}">Home</a></li>
+            <li data-header-link="user">
+              <a href="#user/{{ user_id }}">User</a>
+            </li>
+            <li data-header-link="races">
+              <a href="#user/{{ user_id }}/race">Races</a>
+            </li>
           </ul>
           <ul class="nav pull-right">
             <li class="dropdown"><a href="#" data-toggle="dropdown" class="menu"><i class="icon-user icon-white"></i> {{ user_name }}
               <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="#logout">Logout</a></li>
+                <li><a href="#logout" class="logout">Logout</a></li>
               </ul>
             </li>
           </ul>
@@ -45,7 +65,6 @@
     </div>
 
     <div id="content" class="container">
-    <h1> THIS SHOULD GO AWAY</h1>
     </div>
   </body>
 </html>

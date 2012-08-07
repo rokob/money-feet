@@ -1,0 +1,31 @@
+<section>
+  <div class="page-header">
+    <h1>Races</h1>
+  </div>
+  {{#each races}}
+  <div class="row">
+    <ul class="thumbnails">
+      <li class="span12">
+        <div class="thumbnail span2 offset1">
+          <img class="race_img" src="{{this.img}}" />
+        </div>
+        <div class="span6">
+          <a href="#user/{{../user_id}}/race/{{this.id}}">
+          <h3>{{this.name}} - {{this.location}}</h3>
+          </a>
+          <h4>Distance: {{this.distance}} {{this.units}}</h4>
+          <h4>{{formatTime this.datetime}}</h4>
+          <h4><a href="{{this.url}}">Race website</a></h4>
+          <p>{{this.blurb}}</p>
+        </div>
+        <div class="span2">
+        {{#unless ../is_current}}
+        <a class="btn btn-success support"
+          href="#user/{{../../user_id}}/race/{{this.id}}">Support</a>
+        {{/unless}}
+        </div>
+      </li>
+    </ul>
+  </div>
+  {{/each}}
+</section>

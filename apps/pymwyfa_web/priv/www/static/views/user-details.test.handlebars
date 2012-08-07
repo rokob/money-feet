@@ -3,15 +3,15 @@
     <ul class="thumbnails">
       <li class="span12">
         <div class="thumbnail span2 offset1">
-          <img class="user_img" src="{{info.img}}" />
+          <img class="user_img" src="{{user.img}}" />
         </div>
         <div class="span8">
           {{#if is_current}}
           <h1>Your activity</h1>
           <p class="lead">Your races</p>
           {{else}}
-          <h1>{{info.disp_name}}'s races</h1>
-          <p class="lead">Check out what {{info.disp_name}} is up to</p>
+          <h1>{{user.name}}'s races</h1>
+          <p class="lead">Check out what {{user.name}} is up to</p>
           {{/if}}
         </div>
       </li>
@@ -30,7 +30,7 @@
           <img class="race_img" src="{{img}}" />
         </div>
         <div class="span6">
-          <a href="#user/{{../info.id}}/race/{{id}}">
+          <a href="#user/{{../user.id}}/race/{{id}}">
           <h3>{{name}} - {{location}}</h3>
           </a>
           <h4>Distance: {{distance}} {{units}}</h4>
@@ -40,16 +40,17 @@
         </div>
         <div class="span2">
         <a class="btn btn-success"
-        href="#user/{{../info.id}}/race/{{id}}">Support</a>
+        href="#user/{{../user.id}}/race/{{id}}">Support</a>
         </div>
       </li>
     </ul>
   </div>
   {{/each}}
 </section>
+{{#if charities}}
 <section>
   <div class="page-header">
-    <h1>Charities {{info.disp_name}} supports</h1>
+    <h1>Charities {{user.name}} supports</h1>
   </div>
   {{#each charities}}
   <div class="row">
@@ -68,3 +69,4 @@
   </div>
   {{/each}}
 </section>
+{{/if}}

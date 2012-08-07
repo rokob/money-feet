@@ -2,10 +2,11 @@
   "user_pages": {
     "u1": {
       "is_current": true,
-      "info": {
+      "user": {
         "id": "u1",
-        "disp_name": "Andy",
-        "full_name": "Andy Ledvina",
+        "first_name": "Andy",
+        "last_name": "Ledvina",
+        "name": "Andy Ledvina",
         "charities": ["c1"],
         "races": ["r3"],
         "img":
@@ -37,10 +38,11 @@
       ]
     },
     "u2": {
-      "info": {
+      "user": {
         "id": "u2",
-        "disp_name": "Wolf",
-        "full_name": "Wolf Gang",
+        "first_name": "Wolf",
+        "last_name": "Gang",
+        "name": "Wolf Gang",
         "charities": ["c1","c2"],
         "races": ["r1"],
         "img":
@@ -79,10 +81,11 @@
       ]
     },
     "u3": {
-      "info": {
+      "user": {
         "id": "u3",
-        "disp_name": "Lauren",
-        "full_name": "Lauren Runner",
+        "first_name": "Lauren",
+        "last_name": "Runner",
+        "name": "Lauren Runner",
         "charities": [],
         "races": ["r1"],
         "img":
@@ -111,10 +114,9 @@
     "u1:r3": {
 	  "user": {
             "id": "u1",
-            "disp_name": "Andy",
-            "full_name": "Andy Ledvina",
-            "charities": ["c1"],
-            "races": ["r3"],
+            "first_name": "Andy",
+            "last_name": "Ledvina",
+            "name": "Andy Ledvina",
             "img":
             "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-snc4/370842_10234694_1622559660_n.jpg"
           },
@@ -146,6 +148,16 @@
      "scale": 5,
      "unit": 60,
      "charity": "c1"
+    },
+    {"from": "u3",
+     "from_name": "Lauren",
+     "to": "u1",
+     "race": "r3",
+     "flat": 10,
+     "bonus": 10,
+     "scale": 1,
+     "unit": 30,
+     "charity": "c1"
     }
 	  ],
 	  "charities": [
@@ -161,10 +173,9 @@
 	"u3:r1": {
           "user":  {
 	    "id": "u3",
-            "disp_name": "Lauren",
-            "full_name": "Lauren Runner",
-            "charities": [],
-            "races": ["r1"],
+            "first_name": "Lauren",
+            "last_name": "Runner",
+            "name": "Lauren Runner",
             "img":
             "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-snc4/370842_10234694_1622559660_n.jpg"
           },
@@ -211,10 +222,9 @@
 	"u2:r1": {
           "user":  {
 	    "id": "u2",
-            "disp_name": "Wolf",
-            "full_name": "Wolf Gang",
-            "charities": ["c1", "c2"],
-            "races": ["r1"],
+            "first_name": "Wolf",
+            "last_name": "Gang",
+            "name": "Wolf Gang",
             "img":
             "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-snc4/370842_10234694_1622559660_n.jpg"
           },

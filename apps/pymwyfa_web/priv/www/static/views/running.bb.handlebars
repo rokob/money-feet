@@ -1,0 +1,43 @@
+<header class="subhead">
+  <div class="row">
+    <ul class="thumbnails">
+      <li class="span12">
+        <div class="thumbnail span2 offset1">
+          <img class="user_img" src="{{user.img}}" />
+        </div>
+        <div class="span5 centered">
+          <h1>{{user.name}}</h1>
+          <p class="lead">{{race.name}}</p>
+        </div>
+        <div class="thumbnail span2">
+          <img class="race_img" src="{{race.img}}" />
+        </div>
+      </li>
+    </ul>
+  </div>
+</header>
+<section>
+  <div class="row">
+    <div class="span4">
+      <h1>Goal: {{secsToTime goal}}</h1>
+      <h1>Finish:
+       <span id="expected-finish">{{secsToTime goal}}</span>
+      </h1>
+      <h1>Donation:
+       $<span id="expected-donation">0</span>
+      </h1>
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="span4">
+      <h1>Supporters</h1>
+    </div>
+    <div class="span8">
+      <div id="slider-finish"></div>
+    </div>
+  </div>
+  <hr />
+  <div id="data-challenge-list"></div>
+  <br />
+</section>
